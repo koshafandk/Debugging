@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4U8-BZ-qOR">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="edH-ja-TzV">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="4U8-BZ-qOR" customClass="MainViewController" customModule="Debugging" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V5c-BZ-JL1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3H0-3S-Xuj">
+                                <rect key="frame" x="20" y="44" width="76" height="30"/>
+                                <state key="normal" title="Processing"/>
+                                <connections>
+                                    <action selector="actionTapOnProcessingButton:" destination="4U8-BZ-qOR" eventType="touchUpInside" id="DCh-9u-3nB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-GA-zGS">
+                                <rect key="frame" x="354" y="44" width="34" height="30"/>
+                                <state key="normal" title="Error"/>
+                                <connections>
+                                    <action selector="actionTapOnErrorButton:" destination="4U8-BZ-qOR" eventType="touchUpInside" id="fyk-jG-Qat"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMR-W5-RNz">
+                                <rect key="frame" x="20" y="317" width="374" height="545"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhb-rj-Rqk">
+                                        <rect key="frame" x="153" y="10" width="68" height="3"/>
+                                        <color key="backgroundColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Dhb-rj-Rqk" firstAttribute="centerX" secondItem="HMR-W5-RNz" secondAttribute="centerX" id="6jO-L8-6fB"/>
+                                    <constraint firstAttribute="height" constant="545" id="F3g-GC-A3U"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dhb-rj-Rqk" secondAttribute="bottom" constant="532" id="M1r-ck-XhC"/>
+                                    <constraint firstItem="Dhb-rj-Rqk" firstAttribute="leading" secondItem="HMR-W5-RNz" secondAttribute="leading" constant="153" id="Ss4-ee-qG6"/>
+                                    <constraint firstItem="Dhb-rj-Rqk" firstAttribute="top" secondItem="HMR-W5-RNz" secondAttribute="top" constant="10" id="c6A-s0-DO1"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple2" translatesAutoresizingMaskIntoConstraints="NO" id="BQv-Ar-GjR">
+                                <rect key="frame" x="334" y="100" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BQv-Ar-GjR" secondAttribute="height" multiplier="1:1" id="faM-YU-XnS"/>
+                                    <constraint firstAttribute="width" constant="100" id="wfM-4m-gsY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3H0-3S-Xuj" firstAttribute="top" secondItem="J0n-mh-0kb" secondAttribute="top" id="6Kk-pQ-jFq"/>
+                            <constraint firstItem="3H0-3S-Xuj" firstAttribute="leading" secondItem="J0n-mh-0kb" secondAttribute="leading" constant="20" id="9bf-Qp-nHR"/>
+                            <constraint firstItem="HMR-W5-RNz" firstAttribute="centerX" secondItem="V5c-BZ-JL1" secondAttribute="centerX" id="KNa-TG-Jlc"/>
+                            <constraint firstItem="J0n-mh-0kb" firstAttribute="trailing" secondItem="8bC-GA-zGS" secondAttribute="trailing" constant="26" id="ZqG-22-zpg"/>
+                            <constraint firstItem="BQv-Ar-GjR" firstAttribute="top" secondItem="8bC-GA-zGS" secondAttribute="bottom" constant="26" id="a9F-59-c26"/>
+                            <constraint firstItem="J0n-mh-0kb" firstAttribute="bottom" secondItem="HMR-W5-RNz" secondAttribute="bottom" id="eHF-iz-EKw"/>
+                            <constraint firstItem="BQv-Ar-GjR" firstAttribute="trailing" secondItem="V5c-BZ-JL1" secondAttribute="trailing" constant="20" id="jzq-jD-BRM"/>
+                            <constraint firstItem="HMR-W5-RNz" firstAttribute="leading" secondItem="J0n-mh-0kb" secondAttribute="leading" constant="20" id="xsZ-px-ahS"/>
+                            <constraint firstItem="3H0-3S-Xuj" firstAttribute="baseline" secondItem="8bC-GA-zGS" secondAttribute="baseline" id="ynf-IR-Dpx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J0n-mh-0kb"/>
+                    </view>
+                    <connections>
+                        <outlet property="lineView" destination="Dhb-rj-Rqk" id="wqC-JG-1xK"/>
+                        <outlet property="panelView" destination="HMR-W5-RNz" id="Rgt-zt-8Nv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjU-HZ-NUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897.10144927536237" y="-94.419642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Apple2" width="256" height="256"/>
+    </resources>
+</document>
